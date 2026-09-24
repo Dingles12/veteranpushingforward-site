@@ -1,0 +1,111 @@
+/* Capability Statement — screen + 1-page print (US Letter) */
+:root {
+  --navy-950: #050f1f; --navy-900: #081a33; --navy-800: #0b1f3a; --navy-700: #14325c;
+  --gold-400: #e2bb4a; --gold-500: #d4a72c; --gold-700: #7a5c0c; --red-600: #b22234;
+  --ink: #152033; --ink-soft: #3d4a5f; --line: #dde3ec;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+* , *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font); color: var(--ink); background: #e7ebf2; line-height: 1.45; font-size: 15px; }
+svg { display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold-500); outline-offset: 2px; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.toolbar {
+  max-width: 8.5in; margin: 0 auto; padding: 1rem 1rem .75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.tb-link { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; color: var(--navy-800); text-decoration: none; }
+.tb-link svg { width: 18px; height: 18px; transform: rotate(180deg); }
+.tb-link:hover { text-decoration: underline; }
+.tb-btn {
+  display: inline-flex; align-items: center; gap: .5rem; font: inherit; font-weight: 700; cursor: pointer;
+  background: var(--navy-800); color: #fff; border: 0; border-radius: 999px; padding: .65rem 1.1rem;
+}
+.tb-btn svg { width: 18px; height: 18px; }
+.tb-btn:hover { background: var(--navy-700); }
+
+.sheet {
+  max-width: 8.5in; margin: 0 auto 2rem; background: #fff; box-shadow: 0 20px 50px -20px rgba(8, 26, 51, .35);
+  padding: 0 0 .35in; overflow: hidden;
+}
+
+.cs-header {
+  background: linear-gradient(120deg, var(--navy-900), var(--navy-700)); color: #fff;
+  padding: .32in .4in .28in; display: grid; gap: 1rem;
+}
+@media (min-width: 700px) { .cs-header { grid-template-columns: 1fr auto; align-items: center; } }
+.cs-brand { display: flex; gap: .9rem; align-items: center; }
+.brand-mark { width: 58px; height: 58px; flex: none; }
+.cs-name { margin: 0; font-weight: 800; font-size: 1.05rem; color: var(--gold-400); letter-spacing: .02em; }
+.cs-header h1 { margin: .05rem 0 .15rem; font-size: 1.85rem; line-height: 1.1; letter-spacing: -.01em; }
+.cs-tag { margin: 0; font-size: .78rem; color: #c9d4e5; letter-spacing: .02em; }
+.cs-contact { list-style: none; margin: 0; padding: 0; font-size: .8rem; display: grid; gap: .22rem; color: #e6ecf5; }
+.cs-contact li { display: flex; align-items: center; gap: .45rem; }
+.cs-contact svg { width: 14px; height: 14px; color: var(--gold-400); flex: none; }
+.cs-contact a { text-decoration: none; }
+.cs-contact a:hover { text-decoration: underline; }
+.cs-stripe { height: 5px; background: linear-gradient(90deg, var(--red-600) 0 33.3%, #fff 33.3% 66.6%, var(--gold-500) 66.6% 100%); border-bottom: 1px solid var(--line); }
+
+.cs-overview, .cs-cols, .cs-footer { padding-left: .4in; padding-right: .4in; }
+.cs-overview { padding-top: .2in; }
+h2 {
+  font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--navy-800); margin: 0 0 .4rem;
+  padding-bottom: .25rem; border-bottom: 2px solid var(--gold-500); font-weight: 800;
+}
+p { margin: 0 0 .5rem; font-size: .84rem; color: var(--ink); }
+.cs-overview p { font-size: .86rem; }
+
+.cs-cols { display: grid; gap: .22in; margin-top: .14in; }
+@media (min-width: 700px) { .cs-cols { grid-template-columns: 1.55fr 1fr; } }
+.cs-main section + section { margin-top: .16in; }
+
+.cs-list { list-style: none; margin: 0; padding: 0; font-size: .8rem; display: grid; gap: .3rem; }
+.cs-list li { position: relative; padding-left: .95rem; }
+.cs-list li::before { content: ""; position: absolute; left: 0; top: .5em; width: 6px; height: 6px; background: var(--gold-500); transform: rotate(45deg); }
+.cs-list strong { color: var(--navy-900); }
+.cs-disclaimer { font-size: .72rem; color: var(--ink-soft); font-style: italic; }
+
+.cs-side { display: grid; gap: .13in; align-content: start; }
+.cs-box { background: #f4f6fa; border: 1px solid var(--line); border-radius: 8px; padding: .12in .14in; }
+.cs-data { margin: 0; display: grid; gap: .18rem; font-size: .8rem; }
+.cs-data div { display: flex; justify-content: space-between; gap: .75rem; border-bottom: 1px dotted #c3cddb; padding-bottom: .15rem; }
+.cs-data div:last-child { border-bottom: 0; padding-bottom: 0; }
+.cs-data dt { font-weight: 700; color: var(--ink-soft); }
+.cs-data dd { margin: 0; font-weight: 700; color: var(--navy-900); text-align: right; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .04em; }
+.cs-checks { list-style: none; margin: 0; padding: 0; font-size: .8rem; display: grid; gap: .25rem; }
+.cs-checks li { display: flex; gap: .4rem; align-items: flex-start; font-weight: 600; }
+.cs-checks svg { width: 15px; height: 15px; color: #1f7a4d; flex: none; margin-top: .1rem; }
+.cs-checks .pending { color: var(--gold-700); }
+.cs-checks .pending svg { color: var(--gold-700); }
+.cs-codes { list-style: none; margin: 0; padding: 0; font-size: .74rem; display: grid; gap: .16rem; line-height: 1.3; }
+.cs-codes li { display: grid; grid-template-columns: 4.1em 1fr; }
+.cs-codes b { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--navy-800); }
+.cs-codes em { color: var(--gold-700); font-style: normal; font-weight: 700; }
+
+.cs-footer {
+  margin-top: .18in; padding-top: .1in; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: .3rem 1rem;
+  font-size: .72rem; color: var(--ink-soft);
+}
+.cs-footer strong { color: var(--navy-900); }
+
+@media (max-width: 699px) {
+  .sheet { margin: 0 .5rem 1.5rem; }
+  .cs-header, .cs-overview, .cs-cols, .cs-footer { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* ---------- Print: exactly one US Letter page ---------- */
+@page { size: letter; margin: 0; }
+@media print {
+  html, body { background: #fff; font-size: 13.6px; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .toolbar { display: none !important; }
+  .sheet { max-width: none; width: 8.5in; height: 11in; margin: 0; box-shadow: none; padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+  .cs-header { grid-template-columns: 1fr auto; align-items: center; }
+  .cs-cols { grid-template-columns: 1.55fr 1fr; flex: 1 1 auto; }
+  .cs-footer { margin-top: auto; padding-bottom: .3in; }
+  a { text-decoration: none; }
+  section, .cs-box { break-inside: avoid; }
+}
