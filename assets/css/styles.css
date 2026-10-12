@@ -447,3 +447,8 @@ p { margin: 0 0 1em; }
 .contact > *, .footer-grid > *, .fed-layout > *, .about > * { min-width: 0; }
 .contact-info a, .site-footer address a, .form-note a { overflow-wrap: anywhere; }
 .notfound .container { grid-template-columns: 1fr !important; justify-items: center; }
+
+/* Founding-client offers */
+.founding-banner { margin: 3rem auto 0; max-width: 60rem; padding: 1rem 1.25rem; border-left: 4px solid var(--gold-500); background: #fff8e6; color: var(--navy-900); border-radius: 8px; font-size: .95rem; }
+.offers { margin-top: 1.5rem; }
+.card .price { color: var(--navy-900); margin-top: .9rem; }
