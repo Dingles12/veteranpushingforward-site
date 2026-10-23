@@ -305,7 +305,7 @@
         <div class="fed-panel">
           <ul class="status-list">
             <li class="ok"><svg aria-hidden="true"><use href="#i-check"/></svg><span><strong>SAM.gov:</strong> Active · <strong>UEI</strong> QHPNM5AUCFU9 · <strong>CAGE</strong> 24N99</span></li>
-            <li class="ok"><svg aria-hidden="true"><use href="#i-check"/></svg><span>Veteran-Owned Small Business · Service-Disabled Veteran-Owned</span></li>
+            <li class="ok"><svg aria-hidden="true"><use href="#i-check"/></svg><span>Veteran-Owned Small Business</span></li>
             <li class="pending"><svg aria-hidden="true"><use href="#i-clock"/></svg><span>SBA VetCert SDVOSB certification <span class="pill pill-muted">In progress</span></span></li>
             <li class="ok"><svg aria-hidden="true"><use href="#i-file"/></svg><span><strong>NAICS:</strong> 541512 (primary), 541513, 541511, 541519, 541690, 518210</span></li>
             <li class="ok"><svg aria-hidden="true"><use href="#i-clipboard"/></svg><span><strong>PSC:</strong> DA01, DJ01, DC01, DE01, DG01, DD01, DF01, DH01</span></li>
@@ -369,7 +369,13 @@
           </ul>
         </div>
 
-        <div class="form-card">
+        <div class="form-card" data-form-pending>
+          <div class="contact-fallback">
+            <h3>Contact David directly</h3>
+            <p>Email <a href="mailto:david.ingles@veteranpushingforward.com">david.ingles@veteranpushingforward.com</a><br>or call <a href="tel:+16024560961">(602) 456-0961</a>.</p>
+            <p class="form-note">A reply within one business day.</p>
+          </div>
+          <div class="form-wrap">
           <h3>Send us a message</h3>
           <!-- TODO: create a free Formspree form (formspree.io) for david.ingles@veteranpushingforward.com and replace FORM_ENDPOINT_TODO with its form ID. -->
           <form id="contact-form" action="https://formspree.io/f/FORM_ENDPOINT_TODO" method="POST">
@@ -416,6 +422,7 @@
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             <p class="form-note">Your message is delivered to David by email through our form provider. Please don’t include passwords or other sensitive data. Prefer to talk? Call <a href="tel:+16024560961">(602) 456-0961</a>.</p>
           </form>
+          </div>
         </div>
       </div>
     </section>
@@ -435,7 +442,6 @@
           <p>Written security plans (WISPs) for tax and CPA firms, plus managed IT &amp; network, cybersecurity &amp; backup, private AI, and CMMC readiness support.</p>
           <div class="footer-badges">
             <span>Veteran-Owned Small Business</span>
-            <span>Service-Disabled Veteran-Owned</span>
             <span>SAM.gov Registered</span>
           </div>
         </div>

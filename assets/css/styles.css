@@ -477,3 +477,6 @@ p { margin: 0 0 1em; }
 .hero .container.hero-single { display: block; }
 .offer-box .big-sub { font-size: 1rem; font-weight: 600; color: var(--ink-soft); }
 .inherit-link { color: inherit; }
+[data-form-pending] .form-wrap { display: none; }
+.form-card:not([data-form-pending]) .contact-fallback { display: none; }
+.contact-fallback p { font-size: 1.1rem; }

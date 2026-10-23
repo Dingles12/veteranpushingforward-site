@@ -33,6 +33,13 @@
   }
   // Until a booking link is set, [data-booking] buttons fall back to the contact form (#contact).
 
+  // Contact form: shown only once a real endpoint replaces FORM_ENDPOINT_TODO (no-JS default: hidden).
+  var cf = document.getElementById('contact-form');
+  if (cf && cf.getAttribute('action').indexOf('FORM_ENDPOINT_TODO') === -1) {
+    var card = cf.closest('[data-form-pending]');
+    if (card) card.removeAttribute('data-form-pending');
+  }
+
   // Capability statement print button
   var printBtn = document.querySelector('[data-print]');
   if (printBtn) {
