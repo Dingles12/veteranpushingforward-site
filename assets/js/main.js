@@ -24,34 +24,14 @@
     });
   }
 
-  // Contact form: compose a pre-filled email (no backend, no third-party service)
-  var form = document.getElementById('contact-form');
-  if (form) {
-    var status = document.getElementById('form-status');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      var get = function (name) { return (form.elements[name] && form.elements[name].value || '').trim(); };
-      var to = form.getAttribute('data-email');
-      var subject = 'Consultation request: ' + get('topic') + (get('organization') ? ' (' + get('organization') + ')' : '');
-      var body = [
-        'Name: ' + get('name'),
-        'Organization: ' + (get('organization') || '-'),
-        'Email: ' + get('email'),
-        'Phone: ' + (get('phone') || '-'),
-        'Interested in: ' + get('topic'),
-        '',
-        get('message')
-      ].join('\r\n');
-      window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      if (status) {
-        status.textContent = 'Opening your email app… If nothing happens, email us directly at ' + to + '.';
-      }
+  // Booking link — the ONE place to set it. Replace BOOKING_URL_TODO with the Cal.com/Calendly link.
+  var BOOKING_URL = 'BOOKING_URL_TODO';
+  if (BOOKING_URL.indexOf('TODO') === -1) {
+    document.querySelectorAll('[data-booking]').forEach(function (a) {
+      a.href = BOOKING_URL; a.target = '_blank'; a.rel = 'noopener';
     });
   }
+  // Until a booking link is set, [data-booking] buttons fall back to the contact form (#contact).
 
   // Capability statement print button
   var printBtn = document.querySelector('[data-print]');
