@@ -34,7 +34,7 @@ Pages that contain them: `index.html` (JSON-LD, contact section, contact form `a
 The form doesn't need a backend. On submit, JavaScript builds a pre-filled `mailto:` message and opens the visitor's email app. Without JavaScript it falls back to a plain `mailto:` form post. Nothing is stored or sent through a third-party service.
 
 ## Compliance notes
-- SBA VetCert SDVOSB certification is **in progress**. Do not change this to "Certified SDVOSB" until the certification is granted.
+- SBA VetCert VOSB/SDVOSB application is **pending**. Do not change this to "Certified SDVOSB" until the certification is granted.
 - CMMC services are described as *readiness support*. The company is not a C3PAO.
 
 ## Publish on GitHub Pages (when ready)
